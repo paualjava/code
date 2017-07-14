@@ -1,2 +1,8 @@
 git push code master
 https://github.com/paualjava/code.git
+
+
+git remote add origin git@git.oschina.net:xxx/xxx.git
+git pull origin master
+
+
