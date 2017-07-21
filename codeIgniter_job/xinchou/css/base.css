@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, p, span, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, q, pre, a, abbr, acronym, address, cite, del, em, img, strong, sub, sup, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, nav, output, ruby, section, summary, time, mark, audio, video { margin:0; padding:0; border:0; font-size:100%;vertical-align:baseline; }
+/* for html5 */
+*{font-family:"Microsoft yahei";}
+article, aside, details, figrue, figcaption, footer, header, hgroup, nav, section { display:block; }
+ol, ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+table { border-collapse:collapse; border-spacing:0; }
+address, caption, cite, em, strong, th { font-style:normal; }
+sup { vertical-align:text-top; }
+sub { vertical-align:text-bottom; }
+input, textarea, select {font-size:inherit; font-weight:inherit; *font-size:100%; }
+del { text-decoration:line-through; }
+button { border:0; background:none; cursor: pointer; }
+:focus { outline:0; }
+figcaption a{ color:#fff;}
+li{list-style: none;}
+
+.page{overflow:hidden; clear:both;}
+.page{float:left;padding:12px 0px 12px 16px;}
+.page li{float:left; line-height:17px;margin-right:6px;}
+.page li a{float:left;padding:2px 4px 2px;color:#666;border-bottom:1px solid #EEE;}
+.page li a:hover{color:#fff;text-decoration:none;padding:2px 4px 1px;border-bottom:2px solid #fff;}
+.page .thisclass,.page .thisclass a{color:#e55; font-weight:bold;}
+.page .pageinfo{line-height:21px;padding:0;color:#999;}

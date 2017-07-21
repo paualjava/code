@@ -1,0 +1,37 @@
+@charset "utf-8";
+/*---------------
+IE9以下浏览器兼容css文件
+---------------*/
+#nav li { width:130px; background:url(../images/nav-icon01_ie.png); }
+#nav li:first-child { background:url(../images/nav-icon02_ie.png); }
+/*---------------
+标题部分
+---------------*/
+.title-box h1 { background-image:url(../images/logo.png); }
+.title-box2 { background:url(../images/logo2.png) no-repeat;}
+.title-box3 { background:url(../images/logo.png) no-repeat;}
+.title-box2 h1, .title-box3 h1 { background:none;  }
+.title-contact h2 { color:#aaa; }
+/*---------------
+页面元素部分
+---------------*/
+.ajax-case cite { background:url(../images/white2.png); }
+.case3 ul li h4 { margin-right:500px; }
+.introduction button { background:url(../images/intro_btn_ie.png) no-repeat; }
+ul.partner {/* left:0; margin-left:0; */}
+ul.partner li { background:url(../images/partner-li.png) no-repeat; }
+.service-box .mask { padding:8px; border:none; }
+.mask, .mask dl { position:relative; }
+.circle, .circleLeft, .circleRight { float:left; margin-top:-212px; margin-left:-8px; width:216px; height:216px; background:url(../images/circle.png) no-repeat; }
+.circleLeft, .circleRight { position:relative; width:30px; background-position:left 4px; }
+.circleRight { float:right; margin-right:-8px; background-position:right top; background-position:right -4px; }
+/*---------------
+大背景部分
+---------------*/
+.bg-diamond { left:0; text-align:left; background:no-repeat center top; }
+.bg-white, .bg-red, .bg-blue { margin-left:0; width:100%; }
+.bg-white { top:160px; height:364px; background-image:url(../images/bg_white.png); }
+.bg-red { top:1180px; height:1564px; background-image:url(../images/bg_red.png); }
+.bg-blue { top:1180px; height:3128px; background-image:url(../images/bg_blue.png); }
+.diamond-big-opacity { background-image:url(../images/diamond-big01.png); }
+.diamond-small-opacity { background-image:url(../images/diamond-small01.png); }

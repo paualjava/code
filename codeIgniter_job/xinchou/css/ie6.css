@@ -1,0 +1,62 @@
+@charset "utf-8";
+/*---------------
+IE6浏览器兼容css文件
+---------------*/
+body { background-attachment:fixed; }
+header { position:absolute; top:expression(documentElement.scrollTop); margin-top:36px; }
+#nav li { background:url(../images/nav-icon01_ie.gif); }
+#navDote { background-image:url(../images/nav-dote.gif); }
+/*---------------
+标题部分
+---------------*/
+.title-box { background-image:url(../images/logo_box.gif); }
+.title-box h1 { background:url(../images/logo.gif) no-repeat; }
+.title-box2 { background:url(../images/logo2.gif) no-repeat;}
+.title-box3 { background:url(../images/logo.gif) no-repeat;}
+.title-index h2 {background-image:url(../images/logo_name.gif); }
+.title-about { background-image:url(../images/logo_box2.gif); }
+.introduction { background-image:url(../images/intro_bg_ie.png); }
+.red-six { background-image:url(../images/red-six.gif); }
+.title-box2 h1, .title-box3 h1 { background:none; }
+/*---------------
+页面元素部分
+---------------*/
+.case1 li { position:absolute; z-index:999; display:inline; }
+.case1 li.case1_1 { left:100px; top:100px; }
+.case1 li.case1_2 { left:350px; top:100px; }
+.case1 li.case1_3 { left:600px; top:100px; }
+.case1 li.case1_4 { left:850px; top:100px; }
+.case1 li.case1_5 { left:100px; top:320px; }
+.case1 li.case1_6 { left:350px; top:320px; }
+.case1 li.case1_7 { left:600px; top:320px; }
+.case1 li.case1_8 { left:850px; top:320px; }
+.case1 li.case1_9 { left:100px; top:540px; }
+.case1 li.case1_10 { left:350px; top:540px; }
+.case1 li.case1_11 { left:600px; top:540px; }
+.case1 li.case1_12 { left:850px; top:540px; }
+.ajax-case cite { background:#1a4547; }
+#link { background:url(../images/link.gif) no-repeat 0 50px; }
+.title-cite a { background:url(../images/cite.gif) no-repeat; }
+h3.partner { background-image:url(../images/painter.gif); }
+ul.partner li { background:url(../images/partner-li.gif) no-repeat; }
+.down-arrow button { background-image:url(../images/down_arrow.gif); }
+.more-case { display:inline; zoom:1; margin-top:-45px; }
+.down-here { background:url(../images/here.gif) no-repeat; }
+.circle, .circleLeft, .circleRight { margin-top:-268px; }
+.circleLeft { background-position:left top; }
+.circleRight { background-position:right top; }
+/*---------------
+大背景部分
+---------------*/
+.bg-white { background-image:url(../images/bg_white.gif); }
+.bg-red { background-image:url(../images/bg_red.gif); }
+.diamond-big { background-image:url(../images/diamond-big.gif); }
+.diamond-big-opacity { background-image:url(../images/diamond-big01.gif); }
+.diamond-small { background-image:url(../images/diamond-small.gif); }
+.diamond-big02 { background-image:url(../images/diamond-big02.gif); }
+.diamond-big03 { background-image:url(../images/diamond-big03.gif); }
+.cloud01 { background-image:url(../images/cloud01.gif);}
+.cloud02 { background-image:url(../images/cloud02.gif);}
+.cloud03 { background-image:url(../images/cloud03.gif);}
+.thunder { background-image:url(../images/thunder.gif);}
+.satellite { background-image:url(../images/satellite.gif);}
