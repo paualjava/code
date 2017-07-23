@@ -255,7 +255,6 @@ class module_add extends CI_Model {
 					`postdate` int(10) NOT NULL COMMENT '时间',
 					PRIMARY KEY  (`id`)
 					) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;*/
-					$table_structure
 					$table_structure=str_replace("`","",$this->input->post("table_structure"));
 					$i=0;
 					if(preg_match("/CREATE TABLE IF NOT EXISTS([^\(]*)\(.*/is",$table_structure))
