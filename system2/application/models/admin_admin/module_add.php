@@ -3077,7 +3077,8 @@ $(".sort_order").focusin(function() {
 				}
 				elseif($value[9]=="pic_multiple")
 				{
-					$str_view_list.='            <td><img src="<?php echo (substr(@$row->'.$value[0].',0,4)=="http" || substr(@$row->'.$value[0].',0,1)=="/") ? @$row->'.$value[0].' : $base_url.@$row->'.$value[0].';?>" border="0" style="padding:1px;height:23px"/></td>\r\n';
+					$str_view_list.='            <td><img src="<?php echo (substr(@$row->'.$value[0].',0,4)=="http" || substr(@$row->'.$value[0].',0,1)=="/") ? @$row->'.$value[0].' : $base_url.@$row->'.$value[0].';?>" border="0" style="padding:1px;height:23px"/></td>';
+					$str_view_list.="\r\n";
 				}
 				elseif($value[9]=="postdate")
 				$str_view_list.="            <td><?php echo get_time(\$row->".$value[0].",\"Y-m-d H:i:s\");?></td>\r\n";
@@ -3202,6 +3203,8 @@ $(".sort_order").focusin(function() {
 		$content=str_replace("<is_show>",$is_show,$content);
 		$content=str_replace("<sort_order>",$sort_order,$content);
 		$content=str_replace("<search_cate>",$search_cate,$content);
+		$column_name_first=$this->get_table_locate_column($table_name,"int");
+		$content=str_replace("<column_name_first>",$column_name_first,$content);
 		$content=str_replace("<search_cate_column_view>",$search_cate_column_view,$content);
 		//$content=$this->replace_file_view($content,$array_zh,$array_url,$table_name,$table_name_zh,$array_type);
 		$file2=FCPATH."application/views/admin_admin/".$table_name.".php";
@@ -4473,6 +4476,8 @@ $(".sort_order").focusin(function() {
 		$content=str_replace("<export_excel_array>",$export_excel_array,$content);
 		$content=str_replace("<export_excel_time>",$export_excel_time,$content);
 		$content=str_replace("<export_excel_category>",$export_excel_category,$content);
+		$column_name_first=$this->get_table_locate_column($table_name,"int");
+		$content=str_replace("<column_name_first>",$column_name_first,$content);
 		$content=str_replace("<search_cate>",$search_cate,$content);
 		$content=str_replace("<search_cate_column>",$search_cate_column,$content);
 		$content=str_replace("<search_like_more>",$search_like_more,$content);
@@ -4645,6 +4650,8 @@ $(".sort_order").focusin(function() {
 		$file_add=FCPATH."application/models2/".$leixing."/models/".$leixing."_edit.php";
 		$content=file_get_contents($file_add);//var_dump($content);
 		$content=str_replace($leixing,$table_name,$content);
+		$column_name_first=$this->get_table_locate_column($table_name,"int");
+		$content=str_replace("<column_name_first>",$column_name_first,$content);
 		$content=str_replace("<model_edit_pic_multiple_show_info>",$model_edit_pic_multiple_show_info,$content);
 		$content=str_replace("<model_edit_pic_multiple>",$model_edit_pic_multiple,$content);
 		$content=str_replace("<model_edit_array>",$model_edit_array,$content);
@@ -4754,6 +4761,8 @@ $(".sort_order").focusin(function() {
 		$content=str_replace("<search_where_pre_end>",$search_where_pre_end,$content);
 		$content=str_replace("<ajax_save>",$ajax_save,$content);
 		$content=str_replace("<index_category>",$index_category,$content);
+		$column_name_first=$this->get_table_locate_column($table_name,"int");
+		$content=str_replace("<column_name_first>",$column_name_first,$content);
 		$file2=FCPATH."application/controllers/".$table_name.".php";
 		$content=$this->replace_blank_row($content);
 		//if(!file_exists($file2))
@@ -4780,6 +4789,8 @@ $(".sort_order").focusin(function() {
 		$content=str_replace("<field_cate>",$field_cate,$content);
 		$content=str_replace("article",$table_name,$content);
 		$content=str_replace("<table_name_cate>",$table_name_cate,$content);
+		$column_name_first=$this->get_table_locate_column($table_name,"int");
+		$content=str_replace("<column_name_first>",$column_name_first,$content);
 		write_file(FCPATH."application/controllers/".$table_name.".php", $content,"w");
 	}
 	function write_file_front_controller_photo($table_name,$array_url,$input_data,$array_type_new,$table_name_zh,$create_view)
@@ -4849,6 +4860,8 @@ $(".sort_order").focusin(function() {
 		$content=str_replace("<field_pic>",$field_pic,$content);
 		$content=str_replace("<field_postdate>",$field_postdate,$content);
 		$content=str_replace("<field_content>",$field_content,$content);
+		$column_name_first=$this->get_table_locate_column($table_name,"int");
+		$content=str_replace("<column_name_first>",$column_name_first,$content);
 		write_file(FCPATH."application/views/".$table_name.".php", $content,"w");
 		//show
 		$file_add=FCPATH."application/models2/site_www/views/article_show_view_".$template_val.".php";
@@ -4859,6 +4872,8 @@ $(".sort_order").focusin(function() {
 		$content=str_replace("<field_content>",$field_content,$content);
 		$content=str_replace("<field_click>",$field_click,$content);
 		$content=str_replace("<field_postdate>",$field_postdate,$content);
+		$column_name_first=$this->get_table_locate_column($table_name,"int");
+		$content=str_replace("<column_name_first>",$column_name_first,$content);
 		write_file(FCPATH."application/views/".$table_name."_show.php", $content,"w");
 	}
 
@@ -6146,6 +6161,30 @@ $(".sort_order").focusin(function() {
 		}
 		$value=explode(":",$value);
 		return array(@$value[0],@$value[1]);
+	}
+	/**获取指定的列**/
+	function get_table_locate_column($table_name,$type="int",$index=0)
+	{
+		$result=$this->db->query("select * from ".$this->db->dbprefix."module where url='".$table_name."'");
+		$row =$result->row();
+		$data=json_decode($row->data);
+		$i=0;
+		$column_first="";
+		foreach($data as $key=>$value)
+		{
+			$column_name=$value[0];
+			$column_type=$value[1];
+			$column_first=($i==0) ? $column_name : $column_first;
+			if(strpos($column_type,$type)!==false)
+			{
+				if($index==$i)
+				{
+					return $column_name;
+				}
+				$i++;
+			}
+		}
+		return $column_first;
 	}
 	function get_pic_multiple_table($table_name2)
 	{
