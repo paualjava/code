@@ -10,6 +10,31 @@ http://www.code4app.com/thread-14363-1-1.html
 
 http://blog.csdn.net/queenlysun/article/details/60136962
 https://github.com/dsxNiubility/SXNews  新闻站
+http://blog.csdn.net/bonway_huang/article/details/50984601 基础
+
+AFNetWorking 网络请求
+
+SDWebImage 图片加载
+
+MWPhotoBrowser 图片浏览器
+
+MJRefresh 刷新加载控件
+
+RDVTabBarController 一个很好用的tabbar控件
+
+MBProgressHUD 菊花转圈
+
+NJKWebViewProgress webview的加载进度条
+
+Masonry 用于适配
+
+
+
+友盟分享
+极光推送
+腾讯bugly
+Mob验证码服务
+
 
  ios-屏幕适配masonry的使用
 http://blog.csdn.net/u012701023/article/details/49206339  

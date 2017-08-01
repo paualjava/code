@@ -1,0 +1,43 @@
+ //1.创建Window
+16     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+17     self.window.backgroundColor = [UIColor whiteColor];
+18     
+19     //a.初始化一个tabBar控制器
+20     UITabBarController *tb=[[UITabBarController alloc]init];
+21     //设置控制器为Window的根控制器
+22     self.window.rootViewController=tb;
+23     
+24     //b.创建子控制器
+25     UIViewController *c1=[[UIViewController alloc]init];
+26     c1.view.backgroundColor=[UIColor grayColor];
+27     c1.view.backgroundColor=[UIColor greenColor];
+28     c1.tabBarItem.title=@"消息";
+29     c1.tabBarItem.image=[UIImage imageNamed:@"tab_recent_nor"];
+30     c1.tabBarItem.badgeValue=@"123";
+31     
+32     UIViewController *c2=[[UIViewController alloc]init];
+33     c2.view.backgroundColor=[UIColor brownColor];
+34     c2.tabBarItem.title=@"联系人";
+35     c2.tabBarItem.image=[UIImage imageNamed:@"tab_buddy_nor"];
+36     
+37     UIViewController *c3=[[UIViewController alloc]init];
+38     c3.tabBarItem.title=@"动态";
+39     c3.tabBarItem.image=[UIImage imageNamed:@"tab_qworld_nor"];
+40     
+41     UIViewController *c4=[[UIViewController alloc]init];
+42     c4.tabBarItem.title=@"设置";
+43     c4.tabBarItem.image=[UIImage imageNamed:@"tab_me_nor"];
+44    
+45     
+46     //c.添加子控制器到ITabBarController中
+47     //c.1第一种方式
+48 //    [tb addChildViewController:c1];
+49 //    [tb addChildViewController:c2];
+50     
+51     //c.2第二种方式
+52     tb.viewControllers=@[c1,c2,c3,c4];
+53     
+54     
+55     //2.设置Window为主窗口并显示出来
+56     [self.window makeKeyAndVisible];
+57     return YES;
