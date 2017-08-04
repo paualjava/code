@@ -1,0 +1,20 @@
+git 是目前用得最多的版本管理工具了，无论是软件开发还是服务器配置文件管理都离不开 git。
+
+meld 是最好用的文件比较工具。
+
+让 git diff 使用 meld 的方法为：
+
+1、安装meld：
+$ sudo apt-get install meld
+
+2、创建 ~/bin/git-meld.sh 文件，内容为：
+#!/bin/bash
+meld $2 $5
+
+3、让git-meld.sh可被执行：
+$ chmod +x ~/bin/git-meld.sh
+
+4、配置git使用meld：
+$ git config --global diff.external ~/bin/git-meld.sh
+
+然后今后使用 git diff 时，就会自动调用 meld 了 

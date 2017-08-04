@@ -11,6 +11,8 @@ http://www.code4app.com/thread-14363-1-1.html
 http://blog.csdn.net/queenlysun/article/details/60136962
 https://github.com/dsxNiubility/SXNews  新闻站
 http://blog.csdn.net/bonway_huang/article/details/50984601 基础
+http://www.jianshu.com/p/97c97c2ec1ca  ipa打包
+https://segmentfault.com/a/1190000006178770  webpack打包
 
 AFNetWorking 网络请求
 

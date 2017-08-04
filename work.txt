@@ -1,1 +1,4 @@
 1.system2 不一定是id字段
+2.table_view 列表显示出来
+3.底部的图标显示出来
+4.做一个masonry的页面

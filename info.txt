@@ -8,4 +8,5 @@ git pull origin master
 
 ½±½ðÈ·ÈÏ
 http://wshop.wm18.com/order_check.php?act=prize_auto
+http://wshop.wm18.com/tixian_plan.php?action=all
 
