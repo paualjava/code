@@ -1,0 +1,16 @@
+C_Name:    藏品名称
+name:	   委托人
+id_card:   委托人身份证
+C_Classify:藏品类别
+order_sn:  订单编号
+C_Photo:   照片
+weight_pic:照片
+weight_pic2:照片
+three_zip: 三维压缩包
+weight_txt: 重量(g)
+material:   材质
+hardness:   硬度
+thickness:  密度
+three_text: 尺寸描述
+result_pic1:证书图片
+result_pic2:证书图片

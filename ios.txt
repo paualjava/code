@@ -1,6 +1,7 @@
 FlatUIKit 图标库
+
 http://www.cocoachina.com/ios/20150707/12453.html
-http://www.jb51.net/article/93362.htm个人中心，登陆 
+http://www.jb51.net/article/93362.htm个人中心，登陆 设置页面
 http://blog.csdn.net/crazy_srufboy/article/details/21748995     MGTemplateEngine 模版引擎
 http://www.cnblogs.com/ErosLii/p/4514445.html 
 
