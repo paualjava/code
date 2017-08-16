@@ -1,5 +1,9 @@
-FlatUIKit 图标库
+http://api.douban.com/book/subjects?q=java&alt=json&apikey=01987f93c544bbfb04c97ebb4fce33f1  豆瓣  
 
+FlatUIKit 图标库
+学一下
+http://blog.sina.com.cn/s/blog_13e5320140102wd4j.html RDVTabBarController解读
+http://www.jianshu.com/p/775f2d508852  iOS开屏广告解决方案XHLaunchAd 3.0
 http://www.cocoachina.com/ios/20150707/12453.html
 http://www.jb51.net/article/93362.htm个人中心，登陆 设置页面
 http://blog.csdn.net/crazy_srufboy/article/details/21748995     MGTemplateEngine 模版引擎
