@@ -1,3 +1,11 @@
+--------------添加自定义样式
+UILable *nameLable=[[UILable alloc] initWithFrame:CGRectMake(0,5,70,15);
+nameLable.text=@"name";
+nameLabel.font=[UIFont boldSystemFontOfSize:14];
+[cell.contentView addSubview:nameLabel]; 
+
+------------关于我们用json数据和显示数据
+
 git log --pretty=oneline
 
 git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
