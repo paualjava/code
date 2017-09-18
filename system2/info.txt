@@ -1,0 +1,2 @@
+1.article_listDetailViewController.m 的 DetailModel.info，要替换一下，取editor，没有取varchar
+2.如果是phone的话，自动加手机验证
