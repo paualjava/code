@@ -60,18 +60,25 @@
     sView.frame=[[UIScreen mainScreen] bounds];
     sView.contentSize=CGSizeMake(300, 500*4);
     sView.showsVerticalScrollIndicator=NO;
-    for(NSInteger i=0;i<16;i++)
+    for(NSInteger i=0;i<self.arrayData.count;i++)
     {
-        NSString *imageName=[NSString stringWithFormat:@"pic_%ld.jpg",i+1];
+         PhotoListModel *thisModel=self.arrayData[i];
+        NSString *pic=thisModel.pic;
+        NSURL *urlPic=[NSURL URLWithString:pic];
+          UIImageView *imageView=[[UIImageView alloc] init];
+        imageView.frame=CGRectMake(10+(i%3)*120, 5+(i/3)*160, 100, 150);
+        [imageView sd_setImageWithURL:urlPic placeholderImage:[UIImage imageNamed:@"icon_set"]];
+        
+       /* NSString *imageName=[NSString stringWithFormat:@"pic_%ld.jpg",i+1];
         UIImage *image=[UIImage imageNamed:imageName];
         UIImageView *imageV=[[UIImageView alloc] initWithImage:image];
-        imageV.frame=CGRectMake(10+(i%3)*120, 5+(i/3)*160, 100, 150);
-        [sView addSubview:imageV];
+        imageV.frame=CGRectMake(10+(i%3)*120, 5+(i/3)*160, 100, 150);*/
+        [sView addSubview:imageView];
         UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(picShow:)];
         tap.numberOfTapsRequired=1;
         tap.numberOfTouchesRequired=1;
-        imageV.userInteractionEnabled=YES;
-        [imageV addGestureRecognizer:tap];
+        imageView.userInteractionEnabled=YES;
+        [imageView addGestureRecognizer:tap];
     }
     [self.view addSubview:sView];
 }
@@ -79,7 +86,8 @@
 {
     UIImageView *imageV=(UIImageView *) tap.view;
     PhotoListDetailViewController *imageShow=[[PhotoListDetailViewController alloc] init];
-    imageShow.image=imageV.image;
+    NSLog(@"%@",imageV.image);
+    imageShow.pic=imageV.image;
     [self.navigationController pushViewController:imageShow animated:YES];
 }
 - (void)didReceiveMemoryWarning {
