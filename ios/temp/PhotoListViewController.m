@@ -52,7 +52,6 @@
 		thisModel.postdate         =[dic objectForKey:@"postdate"];
         [self.arrayData addObject:thisModel];
     }
-    [self.tableView reloadData];
 	[self showPic];
 }
 -(void)showPic

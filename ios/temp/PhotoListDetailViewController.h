@@ -7,5 +7,6 @@
 #import <UIKit/UIKit.h>
 @interface PhotoListDetailViewController : UIViewController
 @property(nonatomic,assign) NSInteger this_id;
+@property(nonatomic,strong) NSString *pic;
 @property(nonatomic,strong) UIWebView *webView;
 @end

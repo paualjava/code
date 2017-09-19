@@ -21,7 +21,7 @@
     AFHTTPSessionManager *manger=[AFHTTPSessionManager manager];
     NSString *url_pre=@"photo_list_json_data/detail/";
 	NSString *url=[[Tools getSiteUrl] stringByAppendingFormat:@"%@",url_pre];
-	url=[[Tools getSiteUrl] stringByAppendingFormat:@"%@",this.this_id];
+	url=[[Tools getSiteUrl] stringByAppendingFormat:@"%@",self.this_id];
     [manger GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
     {
         if([responseObject isKindOfClass:[NSDictionary class]])
@@ -75,10 +75,8 @@
 -(NSString *) touchBody
 {
     NSMutableString *body = [NSMutableString string];
-    [body appendFormat:@"<div class=\"title\">%@</div>",self.demoDetailModel.title];
-    [body appendFormat:@"<div class=\"time\">%@</div>",self.demoDetailModel.ptime];
-    [body appendString:@"<div class=\"pic\"><img src='http://f10.baidu.com/it/u=3221056985,906277269&fm=72'/></div>"];
-    [body appendString:@"<div class=\"pic\"><img src='http://img5.imgtn.bdimg.com/it/u=2580339513,508680848&fm=26&gp=0.jpg'/></div>"];
+    [body appendFormat:@"<div class=\"title\">%@</div>",self.DetailModel.title];
+    [body appendFormat:@"<div class=\"time\">%@</div>",self.DetailModel.postdate];
     if (self.DetailModel.info != nil) {
         [body appendString:self.DetailModel.info];
     }
