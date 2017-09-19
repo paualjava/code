@@ -62,14 +62,13 @@
     sView.showsVerticalScrollIndicator=NO;
     for(NSInteger i=0;i<self.arrayData.count;i++)
     {
-         PhotoListModel *thisModel=self.arrayData[i];
+	    PhotoListModel *thisModel=self.arrayData[i];
         NSString *pic=thisModel.pic;
         NSURL *urlPic=[NSURL URLWithString:pic];
-          UIImageView *imageView=[[UIImageView alloc] init];
+        UIImageView *imageView=[[UIImageView alloc] init];
         imageView.frame=CGRectMake(10+(i%3)*120, 5+(i/3)*160, 100, 150);
         [imageView sd_setImageWithURL:urlPic placeholderImage:[UIImage imageNamed:@"icon_set"]];
-        
-       /* NSString *imageName=[NSString stringWithFormat:@"pic_%ld.jpg",i+1];
+        /* NSString *imageName=[NSString stringWithFormat:@"pic_%ld.jpg",i+1];
         UIImage *image=[UIImage imageNamed:imageName];
         UIImageView *imageV=[[UIImageView alloc] initWithImage:image];
         imageV.frame=CGRectMake(10+(i%3)*120, 5+(i/3)*160, 100, 150);*/
@@ -86,8 +85,7 @@
 {
     UIImageView *imageV=(UIImageView *) tap.view;
     PhotoListDetailViewController *imageShow=[[PhotoListDetailViewController alloc] init];
-    NSLog(@"%@",imageV.image);
-    imageShow.pic=imageV.image;
+    imageShow.image=imageV.image;
     [self.navigationController pushViewController:imageShow animated:YES];
 }
 - (void)didReceiveMemoryWarning {
