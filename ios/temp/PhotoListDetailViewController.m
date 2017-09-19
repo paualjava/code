@@ -1,17 +1,17 @@
 //
-//  AboutUsDetailViewController.m
+//  PhotoListDetailViewController.m
 //
-//  Created by 512644164@qq.com on 2017/09/18.
+//  Created by 512644164@qq.com on 2017/09/19.
 //  Copyright © 2017年 air. All rights reserved.
 //
-#import "AboutUsDetailViewController.h"
+#import "PhotoListDetailViewController.h"
 #import "AFNetworking.h"
-#import "AboutUsDetailModel.h"
+#import "PhotoListDetailModel.h"
 #import "Tools.h"
-@interface AboutUsDetailViewController ()
-@property(nonatomic,strong) AboutUsDetailModel *DetailModel;
+@interface PhotoListDetailViewController ()
+@property(nonatomic,strong) PhotoListDetailModel *DetailModel;
 @end
-@implementation AboutUsDetailViewController
+@implementation PhotoListDetailViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self loadData];
@@ -19,9 +19,9 @@
 -(void) loadData
 {
     AFHTTPSessionManager *manger=[AFHTTPSessionManager manager];
-    NSString *url_pre=@"about_us_json_data/detail/";
-	NSString *url2=[[Tools getSiteUrl] stringByAppendingFormat:@"%@",url_pre];
-	NSString *url=[url2 stringByAppendingFormat:@"%@",self.this_id];
+    NSString *url_pre=@"photo_list_json_data/detail/";
+	NSString *url=[[Tools getSiteUrl] stringByAppendingFormat:@"%@",url_pre];
+	url=[[Tools getSiteUrl] stringByAppendingFormat:@"%@",this.this_id];
     [manger GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject)
     {
         if([responseObject isKindOfClass:[NSDictionary class]])
@@ -36,9 +36,13 @@
 }
 -(void) parseData:(NSDictionary *)data
 {
-	self.DetailModel=[[AboutUsDetailModel alloc] init];
+	self.DetailModel=[[PhotoListDetailModel alloc] init];
 	self.DetailModel.this_id    =[data objectForKey:@"id"];
 	self.DetailModel.title      =[data objectForKey:@"title"];
+	self.DetailModel.pic        =[data objectForKey:@"pic"];
+	self.DetailModel.cate       =[data objectForKey:@"cate"];
+	self.DetailModel.url        =[data objectForKey:@"url"];
+	self.DetailModel.brief      =[data objectForKey:@"brief"];
 	self.DetailModel.info       =[data objectForKey:@"info"];
 	self.DetailModel.postdate   =[data objectForKey:@"postdate"];
 	[self showInWebView];
@@ -71,8 +75,8 @@
 -(NSString *) touchBody
 {
     NSMutableString *body = [NSMutableString string];
-    [body appendFormat:@"<div class=\"title\">%@</div>",self.DetailModel.title];
-    [body appendFormat:@"<div class=\"time\">%@</div>",self.DetailModel.postdate];
+    [body appendFormat:@"<div class=\"title\">%@</div>",self.demoDetailModel.title];
+    [body appendFormat:@"<div class=\"time\">%@</div>",self.demoDetailModel.ptime];
     [body appendString:@"<div class=\"pic\"><img src='http://f10.baidu.com/it/u=3221056985,906277269&fm=72'/></div>"];
     [body appendString:@"<div class=\"pic\"><img src='http://img5.imgtn.bdimg.com/it/u=2580339513,508680848&fm=26&gp=0.jpg'/></div>"];
     if (self.DetailModel.info != nil) {
