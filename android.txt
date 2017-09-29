@@ -1,2 +1,0 @@
-http://blog.csdn.net/qq_23179075/article/details/52201778  ListView的实现简单新闻列表
-http://blog.csdn.net/guolin_blog/article/details/17482095  Volley1
