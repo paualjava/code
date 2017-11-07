@@ -1,3 +1,8 @@
+https://github.com/CrazyRoy/ShoppingGuide 用这个 高仿 | 单糖
+https://github.com/wythe0102/Mall  高仿京东
+
+
+
 http://www.jianshu.com/p/4a61014beeaf  仿网易新闻中详细页图文混排功能的实现
 OCLint扫出来的问题
 http://www.jianshu.com/p/fdd7c681929c   抓包工具Charles的使用心得
