@@ -1,0 +1,26 @@
+https://github.com/liuling07/SimpleNews
+https://github.com/Rano1/TopNews   今日头条 android客户端
+https://github.com/oubowu/OuNews
+https://github.com/yiyibb/Zhihu  Zhihu
+
+https://github.com/Werb/WerbNews
+https://github.com/WhiteDG/BihuDaily  高仿知乎日报
+https://github.com/xiaohaibin/DMGameApp 一款游戏新闻客户端
+https://github.com/liaozhoubei/NetEasyNews  新闻项目App--android
+https://github.com/zhujun2730/WeiKanDian 新闻资讯类Android客户端
+https://github.com/RealMoMo/FengHuangNews 仿凤凰新闻app Retrofit+Gilde
+
+https://github.com/jaydenxiao2016/AndroidFire  AndroidFire，一款新闻阅读 App框架  --------------------------重点--------
+https://github.com/chentao0707/SimplifyReader  Material Design设计开发的Android客户端
+https://github.com/OCNYang/QBox                 小秋魔盒（QBox）
+
+其他
+https://github.com/atguigu01/Shopping
+https://github.com/DreaminginCodeZH/Douya  开源的 Material Design 豆瓣客户端
+
+
+------------ios----------------
+https://github.com/borenfocus/NewsComing   新闻来了
+https://github.com/577528249/TTNews        TTNews
+https://github.com/XuYang8026/UniversalProject  UniversalProject
+https://github.com/gaoyuhang/DayDayNews   DayDayNews  仿网易新闻客户端
